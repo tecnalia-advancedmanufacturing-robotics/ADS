@@ -22,5 +22,20 @@ endif()
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 
 add_subdirectory(AdsLib)
-add_subdirectory(AdsLibTest)
-add_subdirectory(example)
+# add_subdirectory(AdsLibTest)
+# add_subdirectory(example)
+
+# Install the export (generates .cmake files)
+install(EXPORT ${PROJECT_NAME}
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}/cmake
+  NAMESPACE ${PROJECT_NAME}::
+  FILE ${PROJECT_NAME}-targets.cmake
+)
+install(FILES cmake/ads-config.cmake
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}/cmake
+)
+
+# Install package.xml file for catkin worksapce compatibility
+install(FILES package.xml
+  DESTINATION share/${PROJECT_NAME}
+)

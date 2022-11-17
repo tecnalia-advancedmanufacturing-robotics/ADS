@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+
+  <name>ads</name>
+  <version>0.0.0</version>
+  <description>Beckhoff ADS client library</description>
+
+  <maintainer email="jon.onativia@tecnalia.com">Jon Oñativia</maintainer>
+  <author email="jon.onativia@tecnalia.com">Jon Oñativia</author>
+
+  <license>TODO</license>
+
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+
+</package>
